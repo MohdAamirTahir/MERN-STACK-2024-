@@ -7,15 +7,16 @@ const serviceRoute= require('./router/service-route')
 const adminRoute=require('./router/admin-router')
 const app = express(); 
 const PORT = process.env.PORT || 3000;
+const FRONTEND_URL = process.env.FRONTEND_URL
 const {connectDB} = require('./utils/db')
 const errorMiddleware = require('./middlewares/error-middleware')
 
-
+// FRONTEND_URL
 
 
 // let's takel corse
 const corsOptions = {
-    origin:"http://localhost:5173",
+    origin:`${FRONTEND_URL}`,
     method:"GET, POST, PUT, DELETE, PATCH, HEAD",
     Credentials:true
 }
