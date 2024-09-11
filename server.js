@@ -6,7 +6,7 @@ const contactRoute = require('./router/contact-router')
 const serviceRoute= require('./router/service-route')
 const adminRoute=require('./router/admin-router')
 const app = express(); 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const {connectDB} = require('./utils/db')
 const errorMiddleware = require('./middlewares/error-middleware')
 
